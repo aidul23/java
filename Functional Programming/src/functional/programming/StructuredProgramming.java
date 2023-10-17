@@ -4,7 +4,7 @@ import java.util.List;
 
 public class StructuredProgramming {
     public static void main(String[] args) {
-        List<Integer> numbers = List.of(12,43,53,3,64,87,32,67,5,98);
+        List<Integer> numbers = List.of(1,2,3,4,5,6,7,8,9,10);
         printAllOddNumber(numbers);
         
         System.out.println();
@@ -17,8 +17,13 @@ public class StructuredProgramming {
         printCourseWithWordSpring(courses);
         
         System.out.println();
-        
         printCourseWithFourLetter(courses);
+        
+        System.out.println();
+        printSquareNumber(numbers);
+        
+        System.out.println();
+        printQubeOfOddNumber(numbers);
     }
 
     private static void printAllOddNumber(List<Integer> numbers) {
@@ -47,6 +52,20 @@ public class StructuredProgramming {
         for(String course: courses) {
             if(course.length() >= 4 ) {
                 System.out.println(course);
+            }
+        }
+    }
+
+    private static void printSquareNumber(List<Integer> numbers) {
+        for(int number: numbers) {
+            System.out.println(number * number);
+        }
+    }
+
+    private static void printQubeOfOddNumber(List<Integer> numbers) {
+        for(int number: numbers) {
+            if(number % 2 != 0) {
+                System.out.println((int)Math.pow(number, 3));
             }
         }
     }
